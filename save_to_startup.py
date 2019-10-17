@@ -1,8 +1,7 @@
-import os,sys
-import time
-fts=os.getcwd()+"\main.py" #your file to start
-user=os.getcwd().split('\\')
-os.chdir("C:/Users/"+user[2]+"/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup")
-with open("tst.bat","w") as f:
-    f.write("start " + fts)
-    f.close()
+import os
+fp="" #filepath to start
+uname=os.path.join(os.path.expandvars("%userprofile%"),"Documents and Settings").split("\\")
+os.chdir("C:/Users/"+uname[2]+"/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup")
+with open("start.bat","w") as god:
+    god.write('start '+fp)
+    god.close()
